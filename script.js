@@ -1,12 +1,29 @@
 let size = 16;
 let conStyle;
+let mDown = false;
 
 document.addEventListener("DOMContentLoaded", function(){
     gridLoad();
 });
 
+document.addEventListener("mousedown", function(){
+    mDown = true;
+});
+
+document.addEventListener("mouseup", function(){
+    mDown = false;
+});
+
+function randomRGBA(){
+    let o = Math.round, r = Math.random, s = 255;
+    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+}
+
 function mouseOver(event){
-    event.target.style.backgroundColor = "grey";
+    if(mDown === true){ 
+        let color = randomRGBA();
+        event.target.style.backgroundColor = color;
+    }
 }
 
 function sizeChange(){
@@ -19,6 +36,7 @@ function sizeChange(){
     container.style.width = conSize;
     gridLoad();
 }
+
 
 function gridLoad(){
     const container = document.querySelector('.gridContainer');

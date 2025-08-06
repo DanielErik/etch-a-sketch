@@ -1,8 +1,32 @@
+.kablammo-style {
+  font-family: "Kablammo", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "MORF" 0;
+}
+
+.roboto-style {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 h1{
@@ -13,6 +37,28 @@ div{
     
     width: 10px;
     height: 10px;
+}
+
+.canvas{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    border: 2px solid black;
+    height: 3em;
+    width: 100%;
+}
+
+.headerLinks{
+    display: flex;
+    width: auto;
 }
 
 #pixel{
